@@ -16,17 +16,19 @@ public class Example {
         }else {
             System.out.printf("\"%s\" is not a number!\n", userInput);
         }
-        char[] charArray = userInput.toCharArray();
-        for(int i=0; i < charArray.length; i++) {
-            if (Character.isUpperCase(charArray[i])) {
-                charArray[i] = Character.toLowerCase(charArray[i]);
-            } else if(Character.isLowerCase(charArray[i])) {
-                charArray[i] = Character.toUpperCase(charArray[i]);
-            }
-        }
-        String newUserInput = new String(charArray);
+//        char[] charArray = userInput.toCharArray();
+//        for(int i=0; i < charArray.length; i++) {
+//            if (Character.isUpperCase(charArray[i])) {
+//                charArray[i] = Character.toLowerCase(charArray[i]);
+//            } else if(Character.isLowerCase(charArray[i])) {
+//                charArray[i] = Character.toUpperCase(charArray[i]);
+//            }
+//        }
+//        String newUserInput = new String(charArray);
+//
+//        System.out.println(newUserInput);//StringUtils.swapCase
 
-        System.out.println(newUserInput);
-        System.out.println(StringUtils.reverse(newUserInput));
+        System.out.println(StringUtils.swapCase(userInput));
+        System.out.println(StringUtils.reverse(userInput));
     }
 }
