@@ -10,8 +10,12 @@ public class Example {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number: ");
         String userInput = scanner.nextLine();
-        System.out.println("That is not a number!");
-
+        System.out.printf("You entered: \"%s\"\n", userInput);
+        if(StringUtils.isNumeric(userInput)) {
+            System.out.printf("\"%s\" is a number!\n", userInput);
+        }else {
+            System.out.printf("\"%s\" is not a number!\n", userInput);
+        }
         char[] charArray = userInput.toCharArray();
         for(int i=0; i < charArray.length; i++) {
             if (Character.isUpperCase(charArray[i])) {
